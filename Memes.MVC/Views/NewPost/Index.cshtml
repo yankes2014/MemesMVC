@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "NewPost";
+}
+
+<h2>Tworzenie nowego mema: </h2>
+<div>
+    <form action="/NewPost/FormOne" method="post" enctype="multipart/form-data">
+        <p>Tytuł: </p>
+        <input type="text" name="title" placeholder="Wprowadź tytuł" />
+        <br />
+        <br />
+        <p>Opis/Tagi: </p>
+        <textarea type="text" name="content" placeholder="Wprowadź opis/tagi"></textarea>
+        <br />
+        <br />
+        <p>Twoj podpis: </p>
+        <input type="text" name="author" placeholder="Wprowadź swoją ksywe" />
+        <br />
+        <br />
+        <p>Obraz: </p>
+        <input type="file" name="Image" class="btn btn-primary" accept="image/x-png,image/gif,image/jpeg" />
+        <br />
+        <p><input type="submit" value="Wyslij mema!" class="btn btn-primary active" /></p>
+    </form>
+</div>

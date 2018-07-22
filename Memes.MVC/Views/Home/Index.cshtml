@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@model IEnumerable<Memes.MVC.Models.PostViewModel>
+
+@{
+    var posts = (HashSet<Memes.MVC.Models.PostViewModel>)ViewData["Posts"];
+}
+
+<div class="jumbotron" style="text-align:center; background-image:url(../../Images/krew.jpg)">
+    <h1> XD</h1>
+</div>
+
+
+<div class="row">
+    @for (int i = 0; i < posts.Count; i++)
+    {
+        <div class="col-md-4"></div>
+
+        <div class="col-md-4" style="border: solid; border-width:5px; border-color: darkblue; border-radius: 100px; text-align:center; background: linear-gradient(to right, rgb(76, 255, 0), darkblue);">
+            <h3><b>Mem numer: @(@i + 1)</b></h3>
+            <p><b>Tytuł: </b> @posts.ElementAt(i).Title </p>
+
+            <img src="@posts.ElementAt(i).BackgroundImgSrc" alt="Blog Image" height="350" width="350">
+
+
+            <p><b>Dodał użytkownik: </b>@posts.ElementAt(i).Author <b>w dniu </b>@posts.ElementAt(i).CreationDate</p>
+            <p>Likes: @posts.ElementAt(i).Likes</p>
+            <button>Lubię to!</button>
+
+        </div>
+        <div class="col-md-4"></div>
+    @:</div><div class="row">
+    }
+</div>

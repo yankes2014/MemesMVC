@@ -1,0 +1,12 @@
+C:\Users\domin\Desktop\PoPatologifcznychPrzejsciachZKompilatorem\Memes\Memes.Model\bin\Debug\Memes.Model.dll.config
+C:\Users\domin\Desktop\PoPatologifcznychPrzejsciachZKompilatorem\Memes\Memes.Model\bin\Debug\Memes.Model.dll
+C:\Users\domin\Desktop\PoPatologifcznychPrzejsciachZKompilatorem\Memes\Memes.Model\bin\Debug\Memes.Model.pdb
+C:\Users\domin\Desktop\PoPatologifcznychPrzejsciachZKompilatorem\Memes\Memes.Model\bin\Debug\EntityFramework.dll
+C:\Users\domin\Desktop\PoPatologifcznychPrzejsciachZKompilatorem\Memes\Memes.Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\domin\Desktop\PoPatologifcznychPrzejsciachZKompilatorem\Memes\Memes.Model\bin\Debug\EntityFramework.xml
+C:\Users\domin\Desktop\PoPatologifcznychPrzejsciachZKompilatorem\Memes\Memes.Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\domin\Desktop\PoPatologifcznychPrzejsciachZKompilatorem\Memes\Memes.Model\obj\Debug\Memes.Model.dll
+C:\Users\domin\Desktop\PoPatologifcznychPrzejsciachZKompilatorem\Memes\Memes.Model\obj\Debug\Memes.Model.pdb
+C:\Users\domin\Desktop\PoPatologifcznychPrzejsciachZKompilatorem\Memes\Memes.Model\obj\Debug\Memes.Model.csproj.CoreCompileInputs.cache
+C:\Users\domin\Desktop\PoPatologifcznychPrzejsciachZKompilatorem\Memes\Memes.Model\obj\Debug\Memes.Model.csproj.CopyComplete
+C:\Users\domin\Desktop\PoPatologifcznychPrzejsciachZKompilatorem\Memes\Memes.Model\obj\Debug\Memes.Model.csprojAssemblyReference.cache

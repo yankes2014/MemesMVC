@@ -1,0 +1,17 @@
+C:\Users\domin\Desktop\PoPatologifcznychPrzejsciachZKompilatorem\Memes\Memes.DataAccessLayer\bin\Debug\Memes.DataAccessLayer.dll.config
+C:\Users\domin\Desktop\PoPatologifcznychPrzejsciachZKompilatorem\Memes\Memes.DataAccessLayer\bin\Debug\Memes.DataAccessLayer.dll
+C:\Users\domin\Desktop\PoPatologifcznychPrzejsciachZKompilatorem\Memes\Memes.DataAccessLayer\bin\Debug\Memes.DataAccessLayer.pdb
+C:\Users\domin\Desktop\PoPatologifcznychPrzejsciachZKompilatorem\Memes\Memes.DataAccessLayer\bin\Debug\EntityFramework.dll
+C:\Users\domin\Desktop\PoPatologifcznychPrzejsciachZKompilatorem\Memes\Memes.DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\domin\Desktop\PoPatologifcznychPrzejsciachZKompilatorem\Memes\Memes.DataAccessLayer\bin\Debug\Memes.Model.dll
+C:\Users\domin\Desktop\PoPatologifcznychPrzejsciachZKompilatorem\Memes\Memes.DataAccessLayer\bin\Debug\Memes.Model.pdb
+C:\Users\domin\Desktop\PoPatologifcznychPrzejsciachZKompilatorem\Memes\Memes.DataAccessLayer\bin\Debug\EntityFramework.xml
+C:\Users\domin\Desktop\PoPatologifcznychPrzejsciachZKompilatorem\Memes\Memes.DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\domin\Desktop\PoPatologifcznychPrzejsciachZKompilatorem\Memes\Memes.DataAccessLayer\obj\Debug\Memes.DataAccessLayer.dll
+C:\Users\domin\Desktop\PoPatologifcznychPrzejsciachZKompilatorem\Memes\Memes.DataAccessLayer\obj\Debug\Memes.DataAccessLayer.pdb
+C:\Users\domin\Desktop\PoPatologifcznychPrzejsciachZKompilatorem\Memes\Memes.DataAccessLayer\obj\Debug\Memes.DataAccessLayer.Migrations.init.resources
+C:\Users\domin\Desktop\PoPatologifcznychPrzejsciachZKompilatorem\Memes\Memes.DataAccessLayer\obj\Debug\Memes.DataAccessLayer.csproj.GenerateResource.Cache
+C:\Users\domin\Desktop\PoPatologifcznychPrzejsciachZKompilatorem\Memes\Memes.DataAccessLayer\bin\Debug\Memes.Model.dll.config
+C:\Users\domin\Desktop\PoPatologifcznychPrzejsciachZKompilatorem\Memes\Memes.DataAccessLayer\obj\Debug\Memes.DataAccessLayer.csprojAssemblyReference.cache
+C:\Users\domin\Desktop\PoPatologifcznychPrzejsciachZKompilatorem\Memes\Memes.DataAccessLayer\obj\Debug\Memes.DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\domin\Desktop\PoPatologifcznychPrzejsciachZKompilatorem\Memes\Memes.DataAccessLayer\obj\Debug\Memes.DataAccessLayer.csproj.CopyComplete
