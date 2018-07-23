@@ -24,6 +24,11 @@ namespace Memes.Service.Interfaces
         /// <returns></returns>
         Post Update(Post entity);
         /// <summary>
+        /// Gets top 5 Posts from Post repo with orderby likes descendings
+        /// </summary>
+        /// <returns></returns>
+        ICollection<Post> GetTopFive();
+        /// <summary>
         /// Gets Post entity from Post repo with given int id
         /// </summary>
         /// <param name="id"></param>

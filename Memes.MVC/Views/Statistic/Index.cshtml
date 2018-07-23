@@ -1,17 +1,16 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿
+@{
+    ViewBag.Title = "Index";
 }
 
 @model IEnumerable<Memes.MVC.Models.PostViewModel>
 
 @{
-    var posts = (HashSet<Memes.MVC.Models.PostViewModel>)ViewData["Posts"];
+    var posts = (HashSet<Memes.MVC.Models.PostViewModel>)ViewData["TopFivePosts"];
 }
 
-<div class="jumbotron" style="text-align:center; background-image:url(../../Images/krew.jpg)">
-    <h1> XD</h1>
-</div>
 
+<h2>Top 5 memów z największą ilością lajków XD</h2>
 
 <div class="row">
     @for (int i = 0; i < posts.Count; i++)
@@ -27,8 +26,8 @@
 
             <p><b>Dodał użytkownik: </b>@posts.ElementAt(i).Author <b>w dniu </b>@posts.ElementAt(i).CreationDate</p>
             <p>Likes: @posts.ElementAt(i).Likes</p>
-            <form action="/Home/Like" method="post" enctype="multipart/form-data">
-                <input type="text" name="numerek" value="@posts.ElementAt(i).Id" hidden/>
+            <form action="/Statistic/Like" method="post" enctype="multipart/form-data">
+                <input type="text" name="numerek" value="@posts.ElementAt(i).Id" hidden />
 
                 <input type="submit" value="Lubię to!" class="btn btn-primary active" />
             </form>

@@ -3,6 +3,7 @@ using Memes.Repository;
 using Memes.Service.Interfaces;
 using System.Collections.Generic;
 using System.Data.Entity.Infrastructure;
+using System.Linq;
 
 namespace Memes.Service.Classes
 {
@@ -28,6 +29,14 @@ namespace Memes.Service.Classes
         public ICollection<Post> GetAll()
         {
             return _repository.GetAll();
+        }
+
+        public ICollection<Post> GetTopFive()
+        {
+            var str = _repository.GetAll();
+            str.OrderByDescending(p => p.Likes);
+
+            return str.OrderByDescending(p => p.Likes).ToList().Take(5).ToList();
         }
 
         public Post GetById(int id)

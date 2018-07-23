@@ -3,26 +3,25 @@ using Memes.MVC.Models;
 using Memes.Service.Interfaces;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Web;
 using System.Web.Mvc;
 
 namespace Memes.MVC.Controllers
 {
-    public class HomeController : Controller
+    public class StatisticController : Controller
     {
-
         private IPostService _postService;
 
-        public HomeController(IPostService postService)
+        public StatisticController(IPostService postService)
         {
             _postService = postService;
         }
 
+
+        // GET: Statistic
         public ActionResult Index()
         {
-            var posts = _postService.GetAll();
+            var posts = _postService.GetTopFive();
+            //Stworzyc metody do wyciagania top5 z najwieksza liczba lajkow, i najwieksza liczba komentarzy
             var postViewModels = new HashSet<PostViewModel>();
 
             foreach (var p in posts)
@@ -39,27 +38,14 @@ namespace Memes.MVC.Controllers
                 pv.BackgroundImgSrc = imgSrc;
             }
 
-            ViewData["Posts"] = postViewModels;
 
-            return View();
-        }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
+            ViewData["TopFivePosts"] = postViewModels;
 
             return View();
         }
 
         /// <summary>
-        /// Adds like to post with given int ID
+        /// Adds like to post with given int id
         /// </summary>
         /// <param name="numerek"></param>
         /// <returns></returns>
@@ -70,7 +56,7 @@ namespace Memes.MVC.Controllers
             post.Likes += 1;
             _postService.Update(post);
 
-            return Redirect("/Home/Index");
+            return Redirect("/Statistic/Index");
         }
     }
 }
