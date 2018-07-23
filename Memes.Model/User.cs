@@ -12,13 +12,21 @@ namespace Memes.Model
         #region Properties
 
         public int Id { get; set; }
+        /// <summary>
+        /// Username of User
+        /// </summary>
         public string Username { get; set; }
 
         #endregion
 
         #region NavigationProperties
-
+        /// <summary>
+        /// Created Posts by User
+        /// </summary>
         public ICollection<Post> Posts { get; set; }
+        /// <summary>
+        /// Created Comments by User
+        /// </summary>
         public ICollection<Comment> Comments { get; set; }
 
         #endregion
