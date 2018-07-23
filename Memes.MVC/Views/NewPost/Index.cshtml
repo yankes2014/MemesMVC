@@ -18,9 +18,17 @@
         <input type="text" name="author" placeholder="Wprowadź swoją ksywe" />
         <br />
         <br />
-        <p>Obraz: </p>
+        <p>Obraz: <a data-toggle="tooltip" title="Akceptowane formaty png, gif, jpeg">?</a></p>
+
         <input type="file" name="Image" class="btn btn-primary" accept="image/x-png,image/gif,image/jpeg" />
         <br />
+
         <p><input type="submit" value="Wyslij mema!" class="btn btn-primary active" /></p>
     </form>
 </div>
+
+<script>
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>
