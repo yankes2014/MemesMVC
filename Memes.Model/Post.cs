@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace Memes.Model
 {
+    /// <summary>
+    /// Model of Post
+    /// </summary>
     public class Post
     {
         public Post()

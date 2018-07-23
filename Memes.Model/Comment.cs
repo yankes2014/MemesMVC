@@ -2,6 +2,9 @@
 
 namespace Memes.Model
 {
+    /// <summary>
+    /// Model of Comment
+    /// </summary>
     public class Comment
     {
 

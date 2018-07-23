@@ -2,6 +2,9 @@
 
 namespace Memes.Model
 {
+    /// <summary>
+    /// Model of User
+    /// </summary>
     public class User
     {
         public User()
