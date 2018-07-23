@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace Memes.Repository
 {
@@ -51,17 +52,53 @@ namespace Memes.Repository
             _context.SaveChanges();
             return entity;
         }
+
         public ICollection<T> GetByCustom(Func<T, bool> predicate)
         {
             return _set.Where(predicate).ToList();
         }
-        public ICollection<T> GetManyByCustom(Func<T, bool> predicate)
-        {
-            return _set.Where(predicate).ToList();
-        }
+
+
         public DbEntityEntry<T> Entry(T entity)
         {
             return _context.Entry<T>(entity);
+        }
+
+        //Async methods
+
+        public async Task DeleteAsync(T entity)
+        {
+            if (entity == null)
+                throw new ArgumentNullException();
+            _set.Remove(entity);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task<ICollection<T>> GetAllAsync()
+        {
+            return await _set.ToListAsync();
+        }
+
+        public async Task<T> GetByIdAsync(int id)
+        {
+            return await _set.FindAsync(id);
+        }
+
+        public async Task<T> InsertAsync(T entity)
+        {
+            if (entity == null)
+                throw new ArgumentNullException();
+            _set.Add(entity);
+            await _context.SaveChangesAsync();
+            return entity;
+        }
+
+        public async Task<T> UpdateAsync(T entity)
+        {
+            if (entity == null)
+                throw new ArgumentNullException();
+            await _context.SaveChangesAsync();
+            return entity;
         }
     }
 }
