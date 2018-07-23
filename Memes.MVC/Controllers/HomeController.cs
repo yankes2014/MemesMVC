@@ -4,8 +4,6 @@ using Memes.Service.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Web;
 using System.Web.Mvc;
 
 namespace Memes.MVC.Controllers
@@ -57,6 +55,38 @@ namespace Memes.MVC.Controllers
 
             return View();
         }
+
+        public ActionResult Random()
+        {
+
+            var posts = _postService.GetAll();
+            var postViewModels = new HashSet<PostViewModel>();
+
+            foreach (var p in posts)
+            {
+                _postService.Entry(p).Collection(f => f.Comments).Load();
+
+                var imgSrc = "data:image;base64," + Convert.ToBase64String(p.BackgroundImage);
+                var pv = new PostViewModel();
+
+                postViewModels.Add(
+                    Mapper.Map(p, pv)
+                );
+
+                pv.BackgroundImgSrc = imgSrc;
+            }
+
+            Random rand = new Random();
+            int x = rand.Next(0, posts.Count());
+
+            var postViewModels2 = new HashSet<PostViewModel>();
+            postViewModels2.Add(postViewModels.ElementAt(x));
+
+            ViewData["RandomPost"] = postViewModels2;
+
+            return View();
+        }
+
 
         /// <summary>
         /// Adds like to post with given int ID

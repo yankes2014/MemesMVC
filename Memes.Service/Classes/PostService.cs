@@ -35,8 +35,10 @@ namespace Memes.Service.Classes
         {
             var str = _repository.GetAll();
             str.OrderByDescending(p => p.Likes);
-
-            return str.OrderByDescending(p => p.Likes).ToList().Take(5).ToList();
+            if (str.Count > 4)
+                return str.OrderByDescending(p => p.Likes).ToList().Take(5).ToList();
+            else
+                return str.ToList();
         }
 
         public Post GetById(int id)

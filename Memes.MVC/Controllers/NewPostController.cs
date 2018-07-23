@@ -1,10 +1,6 @@
 ﻿using Memes.Model;
 using Memes.Service.Interfaces;
 using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Web;
 using System.Web.Mvc;
 using System.IO;
@@ -62,8 +58,6 @@ namespace Memes.MVC.Controllers
             imageByte = rdr.ReadBytes((int)file.ContentLength);
             return imageByte;
         }
-
-
 
     }
 }

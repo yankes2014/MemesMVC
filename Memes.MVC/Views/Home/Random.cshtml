@@ -1,16 +1,15 @@
 ﻿
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Random";
 }
-
 @model IEnumerable<Memes.MVC.Models.PostViewModel>
 
 @{
-    var posts = (HashSet<Memes.MVC.Models.PostViewModel>)ViewData["TopFivePosts"];
+    var posts = (HashSet<Memes.MVC.Models.PostViewModel>)ViewData["RandomPost"];
 }
+<h2>Random</h2>
 
 
-<h2>Top 5 memów z największą ilością lajków</h2>
 
 <div class="row">
     @for (int i = 0; i < posts.Count; i++)
@@ -18,7 +17,7 @@
         <div class="col-md-4"></div>
 
         <div class="col-md-4" style="border: solid; border-width:5px; border-color: darkblue; border-radius: 100px; text-align:center; background: linear-gradient(to right, rgb(76, 255, 0), darkblue);">
-            <h3><b>Mem numer: @(@i + 1)</b></h3>
+            <h3><b>Wylosowany mem: </b></h3>
             <p><b>Tytuł: </b> @posts.ElementAt(i).Title </p>
 
             <img src="@posts.ElementAt(i).BackgroundImgSrc" alt="Blog Image" height="350" width="350">
@@ -26,14 +25,23 @@
 
             <p><b>Dodał użytkownik: </b>@posts.ElementAt(i).Author <b>w dniu </b>@posts.ElementAt(i).CreationDate</p>
             <p>Likes: @posts.ElementAt(i).Likes</p>
-            <form action="/Statistic/Like" method="post" enctype="multipart/form-data">
+            <form action="/Home/Like" method="post" enctype="multipart/form-data">
                 <input type="text" name="numerek" value="@posts.ElementAt(i).Id" hidden />
 
                 <input type="submit" value="Lubię to!" class="btn btn-primary active" />
             </form>
 
+
         </div>
         <div class="col-md-4"></div>
     @:</div><div class="row">
+        <div class="row col-md-12" style="text-align:center">
+            <a href="~/Home/Random"><h1>Losuj kolejny!</h1></a>
+        </div>
     }
 </div>
+
+
+
+
+

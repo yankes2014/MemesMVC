@@ -21,7 +21,8 @@ namespace Memes.MVC.Controllers
         public ActionResult Index()
         {
             var posts = _postService.GetTopFive();
-            //Stworzyc metody do wyciagania top5 z najwieksza liczba lajkow, i najwieksza liczba komentarzy
+            //Stworzyc metody do wyciagania top5 z najwieksza liczba komentarzy
+            //Stworzyc losowanie jednego mema
             var postViewModels = new HashSet<PostViewModel>();
 
             foreach (var p in posts)
