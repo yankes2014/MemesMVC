@@ -102,5 +102,15 @@ namespace Memes.MVC.Controllers
 
             return Redirect("/Home/Index");
         }
+
+        [HttpPost]
+        public RedirectResult LikeTwo(int numerek)
+        {
+            var post = _postService.GetById(numerek);
+            post.Likes += 1;
+            _postService.Update(post);
+
+            return Redirect("/Home/Random");
+        }
     }
 }
